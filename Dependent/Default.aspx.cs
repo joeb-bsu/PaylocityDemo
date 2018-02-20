@@ -13,6 +13,7 @@ public partial class Dependent_Default : System.Web.UI.Page
     private const double DependentBenefitCost = 500.00; //cost of benefits for a dependent for a year
     private const int TotalPayPeriods = 26; //total pay periods
     private const double DiscountPct = 0.10; //discount percentage
+    private const char discountLetter = 'A';
     private Boolean isDiscounted = false; //flag indicates is dependent is eligible for discount
 
 
@@ -61,7 +62,7 @@ public partial class Dependent_Default : System.Web.UI.Page
         String fName = FirstName.Text.ToUpper();
         if (fName.Length > 0)
         {
-            if (fName[0].Equals('A'))
+            if (fName[0].Equals(discountLetter))
             {
                 aPresent = true;
             }

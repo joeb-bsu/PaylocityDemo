@@ -166,7 +166,7 @@ public partial class BenefitCosts_Default : System.Web.UI.Page
         
         double balance = benBalance;
         int idx = 0;
-        double[] payment = new double[26];
+        double[] payment = new double[27];
 
 
         RN.Text = startWeek.ToString();

@@ -14,6 +14,7 @@ public partial class Employee_Default : System.Web.UI.Page
     private const int TotalPayPeriods = 26;
     private Boolean isDiscounted = false; //flag to determine if discount applied to benefits
     private const double Discount = 0.10; //discount rate
+    private const char DiscountLetter = 'A';
 
     
     /// <summary>
@@ -131,7 +132,7 @@ public partial class Employee_Default : System.Web.UI.Page
         String fName = FirstName.Text.ToUpper();
         if (fName.Length > 0)
         {
-            if (fName[0].Equals('A'))
+            if (fName[0].Equals(DiscountLetter))
             {
                 aPresent = true;
             }
